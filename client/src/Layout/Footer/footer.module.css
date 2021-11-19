@@ -1,0 +1,97 @@
+.contentAll {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  box-shadow: 0px -10px 25px #2c2b2b;
+}
+.contentBody {
+  display: flex;  
+  background:rgb(10,10,10);
+  justify-content: center;
+  height: 235px;
+  padding-bottom: 15px;
+}
+.p1 {
+  padding-left: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-top:-1px;
+}
+.p2 {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  line-height: 0px;
+  color: White;
+}
+.pD {
+  color: rgb(0, 198, 233);
+  font-weight: bold;
+}
+.column1 {
+  max-width: 1220px;
+  margin-left: -40px; 
+}
+.column2 {
+  max-width: 350px;
+  margin-left: 60px;
+  margin-top:-18px;
+}
+.row1 {    
+  margin-top: 15px;
+}
+.a {     
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 25px;
+}
+.phone {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.column3 {
+    margin-top:-1px;
+  max-width: 350px;
+  margin-left: 65px;
+}
+.row2 {
+  margin-top: 20px; 
+}
+.h1 {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  margin-top: 8px;
+  font-family: "Poppins", sans-serif;
+}
+.h1R {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 12px;
+}
+.p {   
+  padding-left: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  line-height: 31px;
+}
+.linke {
+  color: blue;
+}
+.github {
+  color: gray;
+}
+.email {
+  color: red;
+}
+.wsp {
+  color: green;
+}
+.cell {
+  color: orange;
+}

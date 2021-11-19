@@ -1,0 +1,139 @@
+.contain {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;    
+    background:linear-gradient(rgba(5,7,12,0.40),rgba(5,7,12,0.40)),url(../../img/newbreed.jpg);
+    background-size:cover;   
+    background-position:0px 10px;
+    background-repeat:no-repeat; 
+    margin-top:-10px;      
+}
+.center { 
+    background:linear-gradient(rgba(5,7,12,0.65),rgba(5,7,12,0.75));
+    display:flex;
+    flex-direction: column;      
+    border-radius:50px;
+    margin-bottom:90px;
+    width:750px;
+    margin-left:600px;
+}
+.h1 {    
+    color:rgb(230, 214, 214);
+    letter-spacing:12px;
+    font-size:50px;
+    margin-left:60px;
+    font-family: times, times New Roman, times-roman, georgia, serif;
+}
+.divs {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    margin-top:45px;
+    margin-bottom:20px; 
+    margin-left:45px;
+}
+.label {    
+    color:white;
+    font-size:20px;    
+    letter-spacing:2px;
+    text-shadow: 2px 3px 20px rgb(255, 255, 255)    
+}
+.p1 {   
+    color:rgb(255, 255, 255);
+    font-size:20px;
+    padding:5px;
+    margin:auto;
+    letter-spacing:2px;
+    text-shadow: 2px 4px 5px rgb(109, 107, 107);
+}
+.conteinTemp {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around; 
+    flex-wrap: wrap;  
+}
+.h3 {
+    display:flex;
+    flex-direction: row;    
+    font-size:30px;
+    text-shadow: 2px 11px 20px rgb(0, 0, 0);
+    color:rgb(172, 170, 170);
+    margin-left:150px;
+    text-shadow: 2px 4px 12px rgb(109, 107, 107);
+}
+.inputs {      
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:30px;
+    height:25px;
+    width:300px;    
+    color:White;
+    text-align: center;
+    padding-left:30px;
+    border-radius:5px;
+    padding-right:10px;
+    border:solid 1px rgb(70, 68, 68);
+    background:rgba(0, 0, 0, 0.50);
+}
+.inputs::placeholder {
+    letter-spacing: 2px;
+    color:White;
+    line-height: 20px;
+}
+.divs1 {
+    display:flex;
+    flex-direction: column;   
+    padding:15px;   
+    justify-content: center;
+}
+.label1 {
+    padding-top:15px;
+    color:rgb(197, 196, 196);   
+    font-size:30px;    
+    letter-spacing:2px;    
+    text-shadow: 2px 3px 20px rgb(148, 145, 145);
+}
+.select {
+    margin-left:250px;
+    border-radius:10px;
+    padding-left:50px;
+    font-size:18px;    
+    background:rgb(0, 0, 0);
+    color:rgb(128, 125, 125);
+    border:solid 1px black;
+    display:flex;     
+    flex-direction:column;
+    width:220px;
+    margin-top:15px;
+    padding-top:5px;
+    padding-left:75px;
+}
+.h2{
+    color:white; 
+    font-size:30px;
+    padding:10px;
+}
+.h2e {
+    color:red; 
+    font-size:30px;
+    padding:10px;
+}
+.btn {    
+    background:black;
+    color:rgb(201, 198, 198);
+    width:250px;
+    font-size:25px;
+    height:50px;
+    border-radius:50px;
+    border:solid 1px rgb(53, 52, 52);
+    opacity:0.9;
+}  
+.btn:hover {
+    cursor: pointer;
+    color:rgb(4, 175, 255);      
+}
+.submiteo {
+    margin-bottom:50px;      
+}

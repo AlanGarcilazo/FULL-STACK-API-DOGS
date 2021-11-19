@@ -1,0 +1,18 @@
+.ul {    
+    display:flex;
+    list-style:none;
+    justify-content:space-between;    
+    margin-top:90px;
+    margin-bottom:60px;   
+}
+.a {
+    background:rgba(0, 0, 0, 0.875);
+    margin:12px;
+    text-decoration:none;
+    color:white;
+    border-radius:20px;
+    padding:10px 15px;   
+    text-decoration: none;   
+    box-shadow: 0px 2px 15px rgb(83, 82, 82);
+}
+

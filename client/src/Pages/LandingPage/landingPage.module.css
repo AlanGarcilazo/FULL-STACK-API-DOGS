@@ -1,0 +1,101 @@
+.contentNav {
+  background: linear-gradient(to bottom,rgba(7, 5, 12, 0.50),rgba(7,5,12,0.75)),url(../../img/landing.jpg);
+  background-size: cover;
+  background-position: 0px -30px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.h1 {
+  font-family: times, times New Roman, times-roman, georgia, serif;
+  font-size: 50px;
+  line-height: 40px;
+  letter-spacing: -1px;
+  color: rgb(173, 173, 173);
+  margin-top: 110px;
+  margin-right: 800px;  
+  text-shadow:2px 2px 35px rgb(84, 190, 252);
+}
+.link {
+  text-decoration: none;
+  line-height: 15px;
+  font-size: 21px;
+  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: White;
+  width: 220px;
+  height: 50px;
+  border: solid 0.5px rgb(69, 72, 73);
+  outline: none;
+  color: rgb(84, 190, 252);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-left: -800px;
+}
+.link:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.link:active {
+  color: #000;
+}
+
+.link:active:after {
+  background: transparent;
+}
+
+.link:hover:before {
+  opacity: 1;
+}
+.link:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

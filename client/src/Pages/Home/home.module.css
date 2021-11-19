@@ -1,0 +1,72 @@
+.containerPhader{
+    background:linear-gradient(to top,rgba(5,7,12,0.50),rgba(5,7,12,0.30)),
+    url(../../img/home.jpg);    
+    background-repeat: no-repeat;
+    background-size:cover;    
+    background-position: center;
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;            
+}
+.containerCards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    text-decoration: none;    
+}
+.variosSele {
+    display:flex;    
+    flex-direction: row;
+    align-items: center;  
+    margin-top:40px;      
+}
+.sele {
+    border-radius: 10px;
+    text-shadow:0px 0px 3px rgb(255, 255, 255);
+    display: inline-block;
+	width: 500px;
+	cursor: pointer;
+  	padding: 10px 30px;
+  	height: 50px;  
+    margin: 4px;
+    font-size:18px;
+    color:white;   
+    background:rgba(0, 0, 0,0.50);    
+    margin-left:15px;    
+} 
+.options {      
+    text-shadow:0px 0px 3px rgb(255, 255, 255);  
+    font-size:17px;    
+    color:white;     
+    background-color:rgba(0, 0, 0,0.50);   
+    background:black; 
+}
+.searchButton {
+    display:flex;
+    flex-wrap: wrap;    
+    margin-top:35px;        
+}
+.paginator {
+    margin-top:50px;
+    margin-bottom:50px;    
+}
+.button {  
+    display:block;  
+    margin-top:10px;
+    margin-left:80px;    
+    width:120px;          	
+	cursor: pointer;
+  	padding: 10px 30px; 
+    height:100px;       
+}
+.btn1 {  
+    padding:5px;   
+    color:White;
+    font-size:18px;
+    border-radius:8px;   
+    background:rgba(0, 0, 0,0.50);        
+}
+
+
+
