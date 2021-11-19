@@ -8,8 +8,7 @@ const Nav = () => {
             <NavLink to='/home' exact className={styles.navLink}>
                 <h1 className={styles.h1}>Home</h1>
             </NavLink>
-            <NavLink to='newbreed' exact className={styles.navLink}>
-                
+            <NavLink to='newbreed' exact className={styles.navLink}>                
                 <h1 className={styles.h1}>New Breed</h1>
             </NavLink>
             <NavLink to='/about' exact className={styles.navLink}>

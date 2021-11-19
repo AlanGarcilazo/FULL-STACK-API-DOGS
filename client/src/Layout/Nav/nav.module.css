@@ -2,7 +2,9 @@
     display:flex;
     position: sticky;   
     height:60px;
-    background: black;
+    
+    background:transparent;
+    background: rgba(0, 0, 0, 0.85);
     justify-content:space-between;
     padding:8px;
     padding-left:100px;
@@ -10,7 +12,7 @@
     line-height: 0px;
     z-index:1;
     top:0px;  
-    box-shadow: 0px 15px 15px #202020;;
+    box-shadow: 0px 15px 10px #202020;;
 }
 .navLink {
     text-decoration: none;
