@@ -22,7 +22,9 @@ const Home = () => {
   const allDogs = useSelector((state) => state.dogs);
   const temperaments = useSelector((state) => state.temperaments);
   const [currentPage, setCurrentPage] = useState(1);
+  // eslint-disable-next-line no-unused-vars
   const [orden, setOrden] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [dogsPerPage, setDogsPage] = useState(8);
   //
   /**

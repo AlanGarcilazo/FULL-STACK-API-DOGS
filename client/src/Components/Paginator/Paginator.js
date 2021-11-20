@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import style from './paginator.module.css';
 
@@ -19,7 +20,7 @@ export default function Paginado({ dogsPerPage, allDogs, paginado }) {
         {pageNumber &&
           pageNumber.map(number => (
             <li key={number}
-            className={style.paginado}>
+            className={style.paginado}>             
               <a href="#" className={style.a} onClick={() => paginado(number)}>{number}</a>
             </li>
           ))}
