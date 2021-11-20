@@ -12,7 +12,7 @@ const Cards = ({ name, img, temperament, temperaments, id }) => {
         <div className={s.temps}>     
         {temperament 
           ? temperament.map((el) => "  " + el + "")
-          : temperaments?.map((el) => el.name + ",")}   
+          : temperaments?.map((el) => el.name + " ")}   
           </div>      
       </Link> 
 
