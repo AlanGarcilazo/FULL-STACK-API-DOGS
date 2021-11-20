@@ -82,15 +82,15 @@ const Home = () => {
             <option className={s.options} value="HIGH">Order Higher Weight</option>
           </select>
           <select className={s.sele} onChange={(e) => handleFrom(e)}>
-            <option className={s.options} value="ALL">All</option>
-            <option className={s.options} value="CREATED">New Breeds</option>
+            <option className={s.options} value="ALL">All Breeds</option>
+            <option className={s.options} value="CREATED">Created Breeds</option>
             <option className={s.options} value="API">Dogs Api</option>
           </select>
           <select
             className={s.sele}
             onChange={(e) => handleFilterTemperament(e)}
           >
-            <option className={s.options} value="all">Todos</option>
+            <option className={s.options} value="all">All Temperaments</option>
             {temperaments?.map((elem) => (
               <option className={s.options} value={elem.name} key={elem.id}>
                 {elem.name}

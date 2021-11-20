@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail, cleanQ } from "../../action/index";
-import Nav from "../../Layout/Nav/Nav";
+import Footer from "../../Layout/Footer/Footer";
 import noimg from "../../img/noimg.jpg";
 import s from "./detail.module.css";
 import { Link } from "react-router-dom";
@@ -16,8 +16,7 @@ const Detail = (props) => {
   }, [dispatch]);
   const detail = useSelector((state) => state.detail);
   return (
-    <>
-      <Nav />
+    <>    
       <div className={s.container}>
         {detail.length > 0 ? (
           <div className={s.container__card}>
@@ -53,8 +52,8 @@ const Detail = (props) => {
                           (elem) => elem.name + ", "
                         )}
                   </h4>
-                  <Link to="/home">
-                    <h3>Press HERE for go back</h3>
+                  <Link className={s.link} to="/home">
+                    <h3>Press HERE for go HOME</h3>
                   </Link>
                 </li>
               </ul>
@@ -64,6 +63,7 @@ const Detail = (props) => {
           <p>Loading...</p>
         )}
       </div>
+      <Footer />
     </>
   );
 };
