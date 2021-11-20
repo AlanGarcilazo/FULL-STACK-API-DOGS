@@ -1,6 +1,6 @@
 .containerPhader{
-    background:linear-gradient(to top,rgba(5,7,12,0.50),rgba(5,7,12,0.30)),
-    url(../../img/home.jpg);    
+     background:linear-gradient(to top,rgba(5,7,12,0.50),rgba(5,7,12,0.30)),
+    url(../../img/home.jpg);     
     background-repeat: no-repeat;
     background-size:cover;    
     background-position: center;

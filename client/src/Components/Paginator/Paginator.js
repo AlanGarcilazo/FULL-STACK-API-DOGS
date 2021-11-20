@@ -14,8 +14,7 @@ export default function Paginado({ dogsPerPage, allDogs, paginado }) {
    * Ahora si tengo 'pageNumber', mapeamos todos los números que contenga el arreglo.
    */
   return (
-    <div>
-    
+    <div>    
       <ul className={style.ul}>
         {pageNumber &&
           pageNumber.map(number => (
