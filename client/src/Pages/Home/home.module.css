@@ -68,5 +68,11 @@
     background:rgba(0, 0, 0,0.50);        
 }
 
+.loading {   
+    margin-top:220px;           
+    height:380px;
+    font-size:50px;
+    width:380px;    
+}
 
 

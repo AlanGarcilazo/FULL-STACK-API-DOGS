@@ -1,23 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail, cleanQ } from "../../action/index";
 import Footer from "../../Layout/Footer/Footer";
 import noimg from "../../img/noimg.jpg";
 import s from "./detail.module.css";
 import { Link } from "react-router-dom";
+import gifLoading from '../../img/loading gif.gif'
 
 
 const Detail = (props) => {
-    
+
+  // eslint-disable-next-line no-unused-vars
+  const [loading, setLoading] = useState(true);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(cleanQ());
     dispatch(getDetail(props.match.params.id));
+    setLoading(false);
   }, [dispatch]);
   const detail = useSelector((state) => state.detail);
   return (
+
     <>    
+     {detail.length ? ( <>
       <div className={s.container}>
         {detail.length > 0 ? (
           <div className={s.container__card}>
@@ -65,6 +72,7 @@ const Detail = (props) => {
         )}
       </div>
       <Footer />
+      </> ) : (<img src={gifLoading} className={s.loading} alt="foto"/>) }
     </>
   );
 };

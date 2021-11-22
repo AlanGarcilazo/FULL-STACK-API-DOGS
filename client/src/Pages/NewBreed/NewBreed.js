@@ -5,6 +5,7 @@ import Nav from '../../Layout/Nav/Nav';
 import Footer from '../../Layout/Footer/Footer';
 import style from './newBreed.module.css'
 
+
 const NewBreed = () => {
   const temperaments = useSelector((state) => state.temperaments);
   const dispatch = useDispatch();
@@ -18,7 +19,8 @@ const NewBreed = () => {
     yearsMax: "",
     temperament: [],
   };
-  
+
+ 
  const [values, setValues] = useState(initialState);
  const [namesTemp, setNamesTemp] = useState([]);
  const [errors, setErrors] = useState(false);
@@ -63,11 +65,11 @@ const NewBreed = () => {
   };
 
   useEffect(() => {
-    dispatch(getTemperaments());
+    dispatch(getTemperaments());  
   }, [dispatch]);
 
   return (
-    <>
+    <>    
     <Nav />
     <div className={style.contain}>    
       <h1 className={style.h1}>Create your Breed</h1>
@@ -141,7 +143,8 @@ const NewBreed = () => {
       {errors ? <h2 className={style.h2e}>Something went wrong!</h2> : null}      
       </div>  
     </div>
-    <Footer />
+    <Footer />    
+    
     </>
   );
 };

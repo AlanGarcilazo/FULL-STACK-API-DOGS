@@ -68,7 +68,7 @@ const Footer = () => {
             />
             <a
               className={styles.a}
-              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkVXmtVqmxSMgMHHFNVgTMKxdGnsppbmLJpSsSmrDxMbxZhLLClDxhqqtLhqStqChFJkdH"
+              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpRbMSvkgxmldkwShtKRTNkxKggCWkbPSmQfjmLvjXdHVLZLkJpQbxQmvDMSGDFbrbLjfj"
               target="n_blank"
             >
               Gmail

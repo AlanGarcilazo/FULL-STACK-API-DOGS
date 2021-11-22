@@ -9,7 +9,7 @@ import {
   filterCreated,
   getTemperaments,
 } from "../../action/index";
-
+import gifLoading from '../../img/loading gif.gif'
 import Footer from "../../Layout/Footer/Footer";
 import Nav from "../../Layout/Nav/Nav";
 import Cards from "../../Components/Cards/Cards";
@@ -26,7 +26,9 @@ const Home = () => {
   const [orden, setOrden] = useState("");
   // eslint-disable-next-line no-unused-vars
   const [dogsPerPage, setDogsPage] = useState(8);
-  //
+  // eslint-disable-next-line no-unused-vars
+  const [loading, setLoading] = useState(true);
+  //  
   /**
    * El índice del último perro es: la página actual (Default: 1), por la cantidad de perros por página (Default: 9).
    */
@@ -46,10 +48,11 @@ const Home = () => {
   //+
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
-  };
+  }; 
   useEffect(() => {
     dispatch(getDogs());
-    dispatch(getTemperaments());
+    dispatch(getTemperaments())
+    setLoading(false);
   }, [dispatch]);
   function handleClick(e) {
     e.preventDefault();
@@ -72,8 +75,10 @@ const Home = () => {
     dispatch(filterCreated(e.target.value));
   }
 
+
   return (
     <>
+      {allDogs.length ? ( <>
       <Nav />
       <div className={s.containerPhader}>
         <div className={s.variosSele}>
@@ -140,8 +145,11 @@ const Home = () => {
             paginado={paginado}
           />
         </div>
+
       </div>
-      <Footer />
+       <Footer />
+       
+      </> ) : (<img src={gifLoading} className={s.loading} alt="foto"/>) }
     </>
   );
 };

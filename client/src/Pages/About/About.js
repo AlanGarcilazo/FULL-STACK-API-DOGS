@@ -8,8 +8,11 @@ import { faNode } from "@fortawesome/free-brands-svg-icons";
 import sequelize from "../../img/brand_logo.png";
 
 const About = () => {
+  
+
   return (
     <>
+
       <Nav />
       <div className={styles.contentAbout}></div>
       <div className={styles.cardContainer}>
