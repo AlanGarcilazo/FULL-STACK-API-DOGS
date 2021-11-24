@@ -7,10 +7,9 @@ module.exports = async function getDbInfo() { // funcion async para traerme la b
             model: Temperament,
             attributes: [ 'name' ],
             through: { // tabla intermedia que me traiga todos los atributos.
-                attributes: [],
+                attributes: [], 
             }
         }
     })
 }
-
 

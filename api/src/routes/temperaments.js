@@ -1,4 +1,5 @@
-const router = require( 'express' ).Router(); // importo router
+const {Router} = require('express');
+const router = Router(); // importo router
 const apiInfo = require( '../controllers/getApiInfo' ); // me traigo el controlador de api.
 const { Temperament } = require( '../db' ) // me traigo la tabla temperamento.
 

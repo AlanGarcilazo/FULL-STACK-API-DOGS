@@ -13,10 +13,11 @@ import {
 
 export function getDogs() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/dogs", {});
+    // dispatch lo que dispara la accion.
+    const json = await axios.get("http://localhost:3001/dogs", {});
     return dispatch({
-      type: GET_DOGS,
-      payload: json.data,
+      type: GET_DOGS, // con el tipo de accion
+      payload: json.data, // payload -> todos los perros
     });
   };
 }
@@ -31,26 +32,22 @@ export function getDetail(id) {
 }
 export function getTemperaments() {
   return async (dispatch) => {
-    let json = await axios.get("http://localhost:3001/temperaments");
+    const json = await axios.get("http://localhost:3001/temperaments");
     return dispatch({
       type: GET_TEMPERAMENTS,
       payload: json.data,
     });
   };
 }
-
-export const searchByName = (name) => {
-  return (dispatch) => {
-    axios.get(`http://localhost:3001/dogs?name=${name}`)
-    .then((data) => {
+export function searchByName (name) {
+  return async (dispatch) => {
+    const json = await axios.get(`http://localhost:3001/dogs?name=${name}`);
       return dispatch({
         type: SEARCH_BY_NAME,
-        payload: data.data,
-      })
-    })
-  }
-}
-
+        payload: json.data,        
+      });    
+  };
+};
 export const addDog = ({
   name,
   heightMin,

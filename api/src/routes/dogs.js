@@ -1,4 +1,5 @@
-const router = require("express").Router(); // ME TRAIGO EL ROUTER
+const {Router} = require('express');
+const router = Router(); // ME TRAIGO EL ROUTER
 const { Dog } = require("../db"); // ME TRAIGO LA TABLA DOG
 const getAllDogs = require("../controllers/getAllDogs"); // ME TRAIGO EL CONTROLADOR DE OBTENER TODOS LOS PERROS.
 
@@ -34,7 +35,7 @@ router.get("/:id", async (req, res) => {  //LOCALHOST/DOGS/ID (DETALLE) ---> HAG
 
     if (id) { // SI EXISTE ID 
       const allDogs = await getAllDogs(); // TRAER TODOS LOS PERROS.
-      const filtered = allDogs.filter((elem) => elem.id == id); // FILTRE, Y SI ES ENCUENTRA UN ELEMENTO POR ID, LO COMPARA CON EL PARAMS.
+      const filtered = allDogs.filter((dog) => dog.id == id); // FILTRE, Y SI ES ENCUENTRA UN ELEMENTO POR ID, LO COMPARA CON EL PARAMS.
       if (filtered.length > 0) return res.status(200).send(filtered); // SI EL ELEMENTO ES MAYOR A 0, RETURNAME EL OK.
       return res.status(404).send("The ID was not found"); // SI NO DEVOLVER ERROR.
     }
