@@ -15,7 +15,6 @@ const Cards = ({ name, img, temperament, temperaments, id }) => {
           : temperaments?.map((el) => el.name + " ")}   
           </div>      
       </Link> 
-
     </div>
   );
 };

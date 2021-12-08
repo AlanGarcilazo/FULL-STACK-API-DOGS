@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { addDog, getTemperaments } from '../../action/index';
 import Nav from '../../Layout/Nav/Nav';
@@ -19,7 +20,6 @@ const NewBreed = () => {
     yearsMax: "",
     temperament: [],
   };
-
  
  const [values, setValues] = useState(initialState);
  const [namesTemp, setNamesTemp] = useState([]);
@@ -39,9 +39,12 @@ const NewBreed = () => {
     setNamesTemp((names) => [...names, e.target.options[index].text]);
     setValues((values) => ({
       ...values,
-      temperament: [...values.temperament, Number(e.target.value)],
+      temperament: [...values.temperament, +(e.target.value)],
     }));
   };
+  
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,9 +52,11 @@ const NewBreed = () => {
       values.name &&
       values.heightMin &&
       values.heightMax &&
+      values.heightMax > values.heightMin &&
       values.weightMin &&
       values.weightMax &&
       values.temperament
+      
     ) {
       dispatch(addDog(values));
       setErrors(false);
@@ -74,44 +79,38 @@ const NewBreed = () => {
     <div className={style.contain}>    
       <h1 className={style.h1}>Create your Breed</h1>
       <div className={style.center}>
-      <form onSubmit={handleSubmit}>
 
+      <form onSubmit={handleSubmit}>
         <div className={style.divs}>
           <label className={style.label}>Name of New Breed </label>          
           <input className={style.inputs} type="text" placeholder="Example: Bulldog"  name="name" value={values.name} onChange={handleChange} autoComplete="off"/>
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
-
         <div className={style.divs}>
           <label className={style.label}>Height Min in Cm: </label>
           <input className={style.inputs} type="number" placeholder="Example: 10cm"  name="heightMin" value={values.heightMin} onChange={handleChange} autoComplete="off"/>
         </div>
-
         <div className={style.divs}>
           <label className={style.label}>Height Max in Cm: </label>
           <input className={style.inputs} type="number" placeholder="Example: 150cm"   name="heightMax" value={values.heightMax} onChange={handleChange} autoComplete="off"/>
         </div>
-
         <div className={style.divs}>
           <label className={style.label}>Weight Min in Kg: </label>
           <input className={style.inputs} type="number" placeholder="Example: 1kg"  name="weightMin" value={values.weightMin} onChange={handleChange} autoComplete="off"/>
         </div>
-
         <div className={style.divs}>
           <label className={style.label}>Weight Max in Kg: </label>
           <input className={style.inputs} type="number" placeholder="Example: 150kg"  name="weightMax" value={values.weightMax}onChange={handleChange} autoComplete="off"/>
-        </div>
-        
+        </div>        
         <div className={style.divs}>
           <label className={style.label}>Life Span Min in Years: </label>
           <input className={style.inputs} type="number" placeholder="Example: 1 year"  name="yearsMin" value={values.yearsMin} onChange={handleChange} autoComplete="off"/>
         </div>
-
         <div className={style.divs}>
           <label className={style.label}>Life Span Max in Years: </label>
           <input className={style.inputs} type="number" placeholder="Example: 30 years"  name="yearsMax" value={values.yearsMax} onChange={handleChange} autoComplete="off"/>
         </div>
-
+        
         <div className={style.divs1}>
           <label className={style.label1}>Temperaments: </label>
           <select className={style.select} onChange={handleSelect}>

@@ -24,8 +24,7 @@ export default function Paginado({ dogsPerPage, allDogs, paginado }) {
               <a href="#" className={style.a} onClick={() => paginado(number)}>{number}</a>
             </li>
           ))}
-      </ul>
-    
+      </ul>    
     </div>
   );
 }

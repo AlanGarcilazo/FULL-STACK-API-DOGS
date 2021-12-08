@@ -9,7 +9,7 @@ import {
   filterCreated,
   getTemperaments,
 } from "../../action/index";
-import gifLoading from '../../img/loading gif.gif'
+import gifLoading from "../../img/loading gif.gif";
 import Footer from "../../Layout/Footer/Footer";
 import Nav from "../../Layout/Nav/Nav";
 import Cards from "../../Components/Cards/Cards";
@@ -26,9 +26,6 @@ const Home = () => {
   const [orden, setOrden] = useState("");
   // eslint-disable-next-line no-unused-vars
   const [dogsPerPage, setDogsPage] = useState(8);
-  // eslint-disable-next-line no-unused-vars
-  const [loading, setLoading] = useState(true);
-  //  
   /**
    * El índice del último perro es: la página actual (Default: 1), por la cantidad de perros por página (Default: 9).
    */
@@ -48,11 +45,10 @@ const Home = () => {
   //+
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
-  }; 
+  };
   useEffect(() => {
     dispatch(getDogs());
-    dispatch(getTemperaments())
-    setLoading(false);
+    dispatch(getTemperaments());
   }, [dispatch]);
   function handleClick(e) {
     e.preventDefault();
@@ -75,81 +71,99 @@ const Home = () => {
     dispatch(filterCreated(e.target.value));
   }
 
-
   return (
     <>
-      {allDogs.length ? ( <>
-      <Nav />
-      <div className={s.containerPhader}>
-        <div className={s.variosSele}>
-          <select className={s.sele} onChange={(e) => handleFilterValue(e)}>
-            <option className={s.options} value="AZ">Order A-Z</option>
-            <option className={s.options} value="ZA">Order Z-A</option>
-            <option className={s.options} value="LESS">Order Less Weight</option>
-            <option className={s.options} value="HIGH">Order Higher Weight</option>
-          </select>
-          <select className={s.sele} onChange={(e) => handleFrom(e)}>
-            <option className={s.options} value="ALL">All Breeds</option>
-            <option className={s.options} value="CREATED">Created Breeds</option>
-            <option className={s.options} value="API">Dogs Api</option>
-          </select>
-          <select
-            className={s.sele}
-            onChange={(e) => handleFilterTemperament(e)}
-          >
-            <option className={s.options} value="all">All Temperaments</option>
-            {temperaments?.map((elem) => (
-              <option className={s.options} value={elem.name} key={elem.id}>
-                {elem.name}
-              </option>
-            ))}
-          </select>
-        </div>
+      {allDogs.length ? (
+        <>
+          <Nav />
+          <div className={s.containerPhader}>
+            <div className={s.variosSele}>
+              <select className={s.sele} onChange={(e) => handleFilterValue(e)}>
+                <option className={s.options} value="AZ">
+                  Order A-Z
+                </option>
+                <option className={s.options} value="ZA">
+                  Order Z-A
+                </option>
+                <option className={s.options} value="LESS">
+                  Order Less Weight
+                </option>
+                <option className={s.options} value="HIGH">
+                  Order Higher Weight
+                </option>
+              </select>
+              <select className={s.sele} onChange={(e) => handleFrom(e)}>
+                <option className={s.options} value="ALL">
+                  All Breeds
+                </option>
+                <option className={s.options} value="CREATED">
+                  Created Breeds
+                </option>
+                <option className={s.options} value="API">
+                  Dogs Api
+                </option>
+              </select>
+              <select
+                className={s.sele}
+                onChange={(e) => handleFilterTemperament(e)}
+              >
+                <option className={s.options} value="all">
+                  All Temperaments
+                </option>
+                {temperaments?.map((elem) => (
+                  <option className={s.options} value={elem.name} key={elem.id}>
+                    {elem.name}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div className={s.searchButton}>
-          <SearchBar />
-          <div className={s.button}>
-            <button className={s.btn1}
-              onClick={(e) => {
-                handleClick(e);
-              }}
-            >
-              {" "}
-              Reload the Breeds!{" "}
-            </button>
+            <div className={s.searchButton}>
+              <SearchBar />
+              <div className={s.button}>
+                <button
+                  className={s.btn1}
+                  onClick={(e) => {
+                    handleClick(e);
+                  }}
+                >
+                  {" "}
+                  Reload the Breeds!{" "}
+                </button>
+              </div>
+            </div>
+
+            <div className={s.containerCards}>
+              {currentDogs &&
+                currentDogs.map((el) => {
+                  return (
+                    <Link to={"/dogs/" + el.id}>
+                      <Cards
+                        name={el.name}
+                        img={el.img ? el.img : el.image}
+                        temperament={el.temperament}
+                        temperaments={el.temperaments}
+                        id={el.id}
+                        className={s.cardiana}
+                      />
+                    </Link>
+                  );
+                })}
+            </div>
+
+            <div className={s.paginator}>
+              <Paginator
+                dogsPerPage={dogsPerPage}
+                allDogs={allDogs.length}
+                paginado={paginado}
+              />
+            </div>
           </div>
-        </div>
-
-        <div className={s.containerCards}>
-          {currentDogs &&
-            currentDogs.map((el) => {
-              return (
-                <Link to={"/dogs/" + el.id}>
-                  <Cards 
-                    name={el.name}
-                    img={el.img ? el.img : el.image}
-                    temperament={el.temperament}
-                    temperaments={el.temperaments}
-                    id={el.id}
-                    className={s.cardiana}
-                  />
-                </Link>
-              );
-            })}
-        </div>
-
-        <div className={s.paginator}>
-          <Paginator
-            dogsPerPage={dogsPerPage}
-            allDogs={allDogs.length}
-            paginado={paginado}
-          />
-        </div>
-
-      </div>
-       <Footer />
-       
-      </> ) : (<img src={gifLoading} className={s.loading} alt="foto"/>) }
+          <Footer />
+        </>
+      ) : (
+        <img src={gifLoading} className={s.loading} alt="foto" />
+      )}
     </>
   );
 };

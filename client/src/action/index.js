@@ -14,13 +14,14 @@ import {
 export function getDogs() {
   return async function (dispatch) {
     // dispatch lo que dispara la accion.
-    const json = await axios.get("http://localhost:3001/dogs", {});
+    const json = await axios.get("http://localhost:3001/dogs");
     return dispatch({
       type: GET_DOGS, // con el tipo de accion
       payload: json.data, // payload -> todos los perros
     });
   };
 }
+
 export function getDetail(id) {
   return async (dispatch) => {
     const json = await axios.get(`http://localhost:3001/dogs/${id}`);
@@ -30,6 +31,7 @@ export function getDetail(id) {
     });
   };
 }
+
 export function getTemperaments() {
   return async (dispatch) => {
     const json = await axios.get("http://localhost:3001/temperaments");
