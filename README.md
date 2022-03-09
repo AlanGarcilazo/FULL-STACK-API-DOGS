@@ -6,16 +6,16 @@
 ------------
 
 
-⚡⚡ Objetivos del Proyecto
+⚡⚡ Project Objectives
 
-El objetivo era crear una aplicación fullstack que traiga datos de una API y los almacene en una base de datos.
-Es una aplicación web creada como proyecto individual para el bootcamp Henry. 
+The goal was to create a fullstack application that fetches data from an API and stores it in a database.
+It is a web application created as an individual project for the bootcamp Henry.
 
 ------------
 
 
- 🧱 Cuál fue el stack tecnológico?
-Estas son las tecnologías que usé para crear el proyecto completo:
+ 🧱 What was the technology stack?
+These are the technologies I used to create the complete project:
 
 React
 <br/>
@@ -30,7 +30,7 @@ Sequelize
 ------------
 
 
- 🌍🌍 Algunas funcionalidades y imagenes del proyecto 
+ 🌍🌍 Some features and images of the project
 
 ### - Landing
 ![](https://i.pinimg.com/originals/21/42/d3/2142d3b04d5a37d06c2a813182a101b9.jpg)
@@ -41,12 +41,12 @@ Sequelize
 ![](https://i.pinimg.com/originals/48/7a/d0/487ad010b2f73112a92344352dd0c13b.jpg)
 
 ------------
-### - Crear raza
+### - Create Race
 
 ![](https://i.pinimg.com/originals/71/78/b8/7178b870d91b0686d81023fbcecde5c5.jpg)
 
 ------------
-### - Raza Creada
+### - Race Created
 
 ![](https://i.pinimg.com/originals/82/c1/74/82c1741beefc6297cab462d756082d25.jpg)
 
@@ -64,19 +64,19 @@ Sequelize
 
 ------------
 
-🔑 Quieres instalar el proyecto en tu pc?
+🔑 Do you want to install the project on your pc?
 
-🔥 Descarga el repo
+🔥 Download the repo
 <br/>
-🔥 Con la consola de comandos (CMD) Instala los modulos correspondientes ( Front + Back)
+🔥 With the command console (CMD) Install the corresponding modules (Front + Back)
 <br/>
-🔥 Con la consola de comandos (CMD) Ejecuta un npm start para correr el proyecto
+🔥 With the command console (CMD) Execute an npm start to run the project
 <br/>
-🔥 Disfruta!
+🔥 Enjoy!
 
 ------------
 
-#### 💬 Contacto:
+#### 💬 Contact:
 📧  alangarcilazo.empleo@gmail.com
 <br/>
 🔎 https://www.linkedin.com/in/alangarcilazo/
